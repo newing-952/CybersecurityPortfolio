@@ -1,2 +1,5 @@
 # CybersecurityPortfolio
-Nick Ewing - Cybersecurity Portfolio
+
+Nick Ewing
+
+This contains my portfolio of Projects along with miscellaneous sample code, scripts, drawings
