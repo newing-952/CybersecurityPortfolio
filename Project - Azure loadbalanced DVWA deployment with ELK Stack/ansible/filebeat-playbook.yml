@@ -1,0 +1,40 @@
+---
+- name: Install Filebeat Playbook
+  hosts: webservers
+  become: true
+  tasks:
+
+#    # Install curl 
+#    - name: Install curl
+#      apt:
+#        force_update_apt: yes
+#        state: present
+#        name: curl
+
+    # Download filebeat deb file 
+    - name: Download (curl) filebeat deb file
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+
+    # Install filebeat deb file
+    - name: Install filebeat deb file
+      command: dpkg -i filebeat-7.6.1-amd64.deb
+
+    # Copy filebeat configuration file to Web-VMs
+    - name: Copy filebeat configuration file to Web-VMs
+      copy:
+        src: /etc/ansible/files/filebeat-config.yml
+        dest: /etc/filebeat/filebeat.yml
+
+    # Run filebeat commands
+    - name: filebeat modules enable system
+      command: filebeat modules enable system
+    - name: filebeat setup
+      command: filebeat setup
+    - name: service filebeat start
+      command: service filebeat start
+
+    # Enable filebeat service on boot
+    - name: Enable filebeat service on boot
+      systemd:
+        name: filebeat
+        enabled: yes

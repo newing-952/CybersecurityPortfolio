@@ -1,0 +1,35 @@
+---
+- name: Install Metricbeat Playbook
+  hosts: webservers
+  become: true
+  tasks:
+
+    # Download metricbeat deb file 
+    - name: Download (curl) metricbeat deb file
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+
+    # Install metricbeat deb file
+    - name: Install metricbeat deb file
+      command: dpkg -i metricbeat-7.6.1-amd64.deb
+
+    # Copy metricbeat configuration file to Web-VMs
+    - name: Copy metricbeat configuration file to Web-VMs
+      copy:
+        src: /etc/ansible/files/metricbeat-config.yml
+        dest: /etc/metricbeat/metricbeat.yml
+
+    # Run metricbeat commands
+    - name: metricbeat modules enable docker
+      command: metricbeat modules enable docker
+
+    - name: metricbeat setup
+      command: sudo metricbeat setup
+
+    - name: service metricbeat start
+      command: sudo service metricbeat start
+
+    # Enable metricbeat service on boot
+    - name: Enable metricbeat service on boot
+      systemd:
+        name: metricbeat
+        enabled: yes
