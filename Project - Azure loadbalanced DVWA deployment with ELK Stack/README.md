@@ -12,8 +12,12 @@ Docker and Ansible were installed on the jump box and a single container was con
 
 In part I of this project, we learned a great deal about using Azure and the Azure Portal.  We configured Azure Resource Groups, Virtual Networks, Network Security Groups, Virtual Machines (CPU, Memory and Disk), Public IP addresses, and Load Balancers.  We configured Network Security Group Inbound Security rules to allow only HTTP and SSH (only from a defined whitelisted IP address) to our Virtual Network.  We installed and configured Docker and Ansible and created Ansible playbooks to manage the deployment of the Web VMs and conform to our IaC model.  We confirmed successful deployment by testing HTTP access to our Web VMs, we systemically shut down certain servers to verify all servers were active and that load balancing was working.  We tested our security rules and configurations by attempting to connect to the network in ways not implicitly permitted.  Finally, we documented our as-built design as well as our playbooks.  More detailed information on addressing, subnets, and access policies will be provided in tables in Part II of this document.
 
-![Microsoft Azure Load Balanced DVWA Deployment](images/Project 1 Part 1.png)
-![Microsoft Azure Load Balanced DVWA Deployment](images/Project 1 Part 1.png)
+![Microsoft Azure Load Balanced DVWA Deployment](images/Project_1_Part_1.png)
+
+![Automated Elk Stack Deployment](images/Project_1_Part_2.png)
+
+
+# Confirm
 
 
 ### Part II - Automated Elk Stack Deployment
