@@ -1,5 +1,3 @@
-# CybersecurityPortfolio
+## CybersecurityPortfolio
 
-Nick Ewing
-
-Linux - Bash Scripts
+### Sample / Example Linux - Bash Scripts

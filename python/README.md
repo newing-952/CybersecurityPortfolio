@@ -1,5 +1,3 @@
-# CybersecurityPortfolio
+## CybersecurityPortfolio
 
-Nick Ewing
-
-Python Code Examples / Samples
+### Sample / Example Python Code 
