@@ -1,12 +1,12 @@
-# CybersecurityPortfolio
+## Microsoft Azure Load Balanced DVWA Deployment / Automated Elk Stack Deployment
 
-Nick Ewing
+## Ansible Playbooks
 
-The following Ansible Playbook .yml files were used to deploy the DVWA webservers as well as the ELK server, including installation of both Filebeat and Metricbeat
+The following Ansible Playbook .yml files were used to deploy the DVWA webservers as well as the ELK server, including installation of both Filebeat and Metricbeat.
 
 ### pentest.yml
 
-This playbook was used to install and configure the Web-VMs with Docker, Python3 and then downloading and launching the DVWA docker web container
+This playbook was used to install and configure the Web-VMs with Docker, Python3 and then downloading and launching the DVWA docker web container.
 
 ### install_elk.yml
 
