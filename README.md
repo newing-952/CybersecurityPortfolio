@@ -1,7 +1,6 @@
 ## Cybersecurity Portfolio
 
-## Nick Ewing
-## newing.mn@gmail.com
+## Nick Ewing - newing.mn@gmail.com
 
 
 This repository contains my portfolio of Projects along with miscellaneous sample code, scripts, drawings, etc.
