@@ -1,5 +1,4 @@
-# CybersecurityPortfolio
-Nick Ewing - Cybersecurity Portfolio
+## Nick Ewing - Cybersecurity Portfolio
 
 ## Microsoft Azure Load Balanced DVWA Deployment
 
