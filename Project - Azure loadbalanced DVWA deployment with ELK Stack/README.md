@@ -95,12 +95,12 @@ All of the Public / Exposed IP Addresses have been further restricted to only al
 In order to use the playbooks, you will need to have your Azure Environment built and already configured. Be certain that your jump box has Docker installed and that you have pulled the correct Ansible Control Node container from docker hub (cyberxsecurity/ansible).cd
 
 SSH into the Jump Box (Ansible Control Node) and follow the steps below:
-- Start the Ansible Control Node container
-..* Use the command "sudo docker container list -a" to determine the container names installed
-..* Start the appropriate container with the command "sudo docker start <container-name>"
-..* Create an interactive session into the docker container with the commnd "sudo docker attach <container-name>"
-- Inside the container:
-..- Copy the ansible playbook .yml files to /etc/ansible
-..- Update the /etc/ansible/hosts file to include the groupings of your systems (webserver or elk) along with their IP addresses
-..- Run the playbooks using the command "ansible-playbook <playbook>.yml"
-..- Use the command "ansible all -m ping" to check that the installation worked as expected.
+1. Start the Ansible Control Node container
+* Use the command "sudo docker container list -a" to determine the container names installed
+* Start the appropriate container with the command "sudo docker start <container-name>"
+* Create an interactive session into the docker container with the commnd "sudo docker attach <container-name>"
+2. Inside the container:
+* Copy the ansible playbook .yml files to /etc/ansible
+* Update the /etc/ansible/hosts file to include the groupings of your systems (webserver or elk) along with their IP addresses
+* Run the playbooks using the command "ansible-playbook <playbook>.yml"
+* Use the command "ansible all -m ping" to check that the installation worked as expected.
