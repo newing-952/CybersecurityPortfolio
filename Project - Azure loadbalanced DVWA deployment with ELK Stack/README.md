@@ -14,9 +14,14 @@ In part I of this project, we learned a great deal about using Azure and the Azu
 Microsoft Azure Load Balanced DVWA Deployment
 
 
+
+
 ### Part II - Automated Elk Stack Deployment
 
-The primary goal of Part II is to add a Cloud Monitoring System by installing and configuring an ELK Stack server VM.  For added fault tolerance, and due to Azure limitations on free trial accounts, the ELK Stack VM and it's virtual network and other components will be installed in a different Azure Region.  The entire project will stay within the same Resource Group, but will require an additional subnet, Network Security Group (firewall), Public IP address and appropriate Inbound Security Rules.  In the physical world, when an additional subnet is created, a router is required to connect the two subnets together and allow approved traffic to flow between subnets.  In the Azure Virtual environment, this is accomplished by peering the two Virtual Networks.  This creates a background inter subnet router that is not visible to or provisioned within the Azure portal, but nonetheless allows communication between the two subnets.
+The primary goal of Part II is to add a Cloud Monitoring System by installing and configuring an ELK Stack server VM.  <What is an ELK StacK?>
+
+
+For added fault tolerance, and due to Azure limitations on free trial accounts, the ELK Stack VM and it's virtual network and other components will be installed in a different Azure Region.  The entire project will stay within the same Resource Group, but will require an additional subnet, Network Security Group (firewall), Public IP address and appropriate Inbound Security Rules.  In the physical world, when an additional subnet is created, a router is required to connect the two subnets together and allow approved traffic to flow between subnets.  In the Azure Virtual environment, this is accomplished by peering the two Virtual Networks.  This creates a background inter subnet router that is not visible to or provisioned within the Azure portal, but nonetheless allows communication between the two subnets.
 
 Although not completely necessary, but nice for learning, I've opened SSH to the ELM-VM, in addition to HTTP and port 5601 which is required by Kibana.  As in part I, we have configured network security group inbound security riles to only allow SSH from the previous whitelisted IP address.  HTTP and port 5601 are open and exposed through ELM VMs public IP address.  Upon completion of Azure configuration of the Virtual Network, Security Group, Virtual Network Peering, Virtual Machine and public IP address, the remainder of the ELK Stack VM will be configured using Docker and Ansible from the Jump Box.  
 
@@ -27,15 +32,27 @@ In order to collect data for the ELK stack, we need to install additional softwa
 
 
 ![Automated Elk Stack Deployment](images/Project_1_Part_2.png)
+Automated ELK Stack Deployment
 
 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+### Appendix
 
-  - _TODO: Enter the playbook file._
 
-This document contains the following details:
-- Description of the Topologu
+### Ansible Playbook Files
+
+[Configure Web VMs](ansible/pentest.yml)
+
+[Install ELK Stack](ansible/install_elk.yml)
+
+[Install Filebeat](ansible/filebeat-playbook.yml)
+
+[Install Metricbeat](ansible/metricbeat-playbook.yml)
+
+These files have been tested and used to generate the full environment on Azure (Less Azure Configuration). They can be used to either recreate the entire deployment described above.
+
+This appensix document contains the following details:
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -49,7 +66,6 @@ This document contains the following details:
 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
