@@ -52,6 +52,10 @@
 - SSL and certificate analysis of any website -- https://www.ssllabs.com/ssltest/
 - Examples of bad  SSL configurations -- https://badssl.com/
 
+## Miscelaneous
+- [GTFOBins](https://gtfobins.github.io/)
+- [Daniel Miessler Security wordists](https://github.com/danielmiessler/SecLists)
+
 ## Week 14 - Web Development Resources
 - [Tutorials Point: HTTP Requests](https://www.tutorialspoint.com/http/http_requests.htm)
 - [Tutorials Point: HTTP Responses](https://www.tutorialspoint.com/http/http_responses.htm)
@@ -77,4 +81,12 @@
 - [Mozilla Developer Network - HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 - [Geeks for Geeks: Cookie Tracking and Stealing Using Cross-Site Scripting Tracking]https://www.geeksforgeeks.org/cookie-tracking-stealing-using-cross-site-scripting/
 
+
+## Week 15 - Web Vulnerabilities
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [10 Most Common Web Security Vulnerabilities](https://www.toptal.com/security/10-most-common-web-security-vulnerabilities)
+- [Common Web Application Vulnerabilities](https://www.veracode.com/security/web-application-vulnerabilities)
+- [Cross-site scripting](https://portswigger.net/web-security/cross-site-scripting)
+- [What is LFI](https://wiki.owasp.org/index.php/Testing_for_Local_File_Inclusion)
+- [TALK: Commix: Detecting and Exploiting Command Injection FLaws](https://www.youtube.com/watch?v=8U88YvLMYQo)
 
